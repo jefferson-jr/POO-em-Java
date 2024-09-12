@@ -1,0 +1,5 @@
+class NomeDaClasse {
+    contructor(parãmetros) {
+        
+    }
+}
