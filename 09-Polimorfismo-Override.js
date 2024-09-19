@@ -36,3 +36,15 @@ class Mago extends Personagem {
     console.log(`${this.nome} lança ${this.feitico}!`);
   }
 }
+
+
+class Arqueiro extends Personagem {
+  constructor(nome, vida, tipoFlecha) {
+    super(nome, vida);
+    this.tipoFlecha = tipoFlecha;
+  }
+
+  atacar() {
+    console.log(`${this.nome} dispara flechas ${this.tipoFlecha}!`);
+  }
+}
