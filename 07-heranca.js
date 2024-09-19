@@ -33,3 +33,10 @@ class Diretor extends Funcionario {
         super(nome, idade, altura, peso, salario);
     }
 }
+
+ // Classe Professor que herda de Pessoa 
+class Professor extends Funcionario {
+    constructor(nome, idade, altura, peso,salario) {
+        super(nome, idade, altura, peso, salario);
+    }
+}
