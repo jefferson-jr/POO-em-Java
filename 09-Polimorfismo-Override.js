@@ -27,7 +27,7 @@ class Guerreiro extends Personagem {
 }
 
 class Mago extends Personagem {
-  constructor(nome, vida, arma) {
+  constructor(nome, vida, feitico) {
     super(nome, vida);
     this.feitico = feitico;
   }
@@ -48,3 +48,17 @@ class Arqueiro extends Personagem {
     console.log(`${this.nome} dispara flechas ${this.tipoFlecha}!`);
   }
 }
+
+
+const guerreiro = new Guerreiro("Arthur", 100, "espada");
+guerreiro.atacar();
+guerreiro.receberDano(20);
+
+
+const mago = new Mago("Merlim", 80, "fogo");
+mago.atacar();
+mago.receberDano(15);
+
+const arqueiro = new Arqueiro("Legolas", 90, "explosiva");
+arqueiro.atacar();
+arqueiro.receberDano(10);
