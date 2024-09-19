@@ -7,3 +7,12 @@ class Pessoa {
         this.peso = peso;
     }
 }
+
+
+// Classe Estudante que herda de Pessoa 
+class Estudante extends Pessoa {
+    constructor(nome, idade, altura, peso,curso) {
+        super(nome, idade, altura, peso);
+        this.curso = curso;
+    }
+}
