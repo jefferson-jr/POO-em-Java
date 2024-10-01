@@ -1,29 +1,31 @@
-// Class base Personagem 
+// Class base Personagem
 class Personagem {
-    constructor(nome, vida) {
-        this.nome = nome;
-        this.vida = vida;
-    }
-    
-    atacar() {
-        console.log(`${this.nome} realizar um ataque basico!`);
-    }
+  constructor(nome, vida) {
+    this.nome = nome;
+    this.vida = vida;
+  }
 
-    receberDano(dano) {
-        this.vida -= dano;
-        console.log(`${this.nome} recebeu ${dano} de dano. Vida restante: ${this.vida}`);
-    }
+  atacar() {
+    console.log(`${this.nome} realizar um ataque basico!`);
+  }
+
+  receberDano(dano) {
+    this.vida -= dano;
+    console.log(
+      `${this.nome} recebeu ${dano} de dano. Vida restante: ${this.vida}`
+    );
+  }
 }
 
 class Guerreiro extends Personagem {
-    constructor(nome, vida, arma) {
-        super(nome, vida);
-        this.arma = arma;
-    }
+  constructor(nome, vida, arma) {
+    super(nome, vida);
+    this.arma = arma;
+  }
 
-    atacar() {
-            console.log(`${this.nome} ataca com a ${this.arma}!`);
-        }
+  atacar() {
+    console.log(`${this.nome} ataca com a ${this.arma}!`);
+  }
 }
 
 class Mago extends Personagem {
@@ -37,7 +39,6 @@ class Mago extends Personagem {
   }
 }
 
-
 class Arqueiro extends Personagem {
   constructor(nome, vida, tipoFlecha) {
     super(nome, vida);
@@ -49,11 +50,9 @@ class Arqueiro extends Personagem {
   }
 }
 
-
 const guerreiro = new Guerreiro("Arthur", 100, "espada");
 guerreiro.atacar();
 guerreiro.receberDano(20);
-
 
 const mago = new Mago("Merlim", 80, "fogo");
 mago.atacar();
